@@ -1,0 +1,50 @@
+[debug] [2023-03-17T09:48:22.816Z] ----------------------------------------------------------------------
+[debug] [2023-03-17T09:48:22.819Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-17T09:48:22.820Z] CLI Version:   11.24.1
+[debug] [2023-03-17T09:48:22.820Z] Platform:      linux
+[debug] [2023-03-17T09:48:22.820Z] Node Version:  v16.17.0
+[debug] [2023-03-17T09:48:22.821Z] Time:          Fri Mar 17 2023 11:48:22 GMT+0200 (South Africa Standard Time)
+[debug] [2023-03-17T09:48:22.821Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-17T09:48:22.916Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"rules"}
+[debug] [2023-03-17T09:48:22.921Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-17T09:48:22.922Z] > authorizing via signed-in user (linah.andrianarivony@gmail.com)
+[debug] [2023-03-17T09:48:22.922Z] [iam] checking project bookshelves-edc36 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-03-17T09:48:22.924Z] > refreshing access token with scopes: []
+[debug] [2023-03-17T09:48:22.927Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-17T09:48:22.927Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-17T09:48:23.941Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-17T09:48:23.941Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-17T09:48:24.049Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bookshelves-edc36:testIamPermissions [none]
+[debug] [2023-03-17T09:48:24.050Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bookshelves-edc36:testIamPermissions x-goog-quota-user=projects/bookshelves-edc36
+[debug] [2023-03-17T09:48:24.050Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bookshelves-edc36:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-03-17T09:48:26.808Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bookshelves-edc36:testIamPermissions 200
+[debug] [2023-03-17T09:48:26.809Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bookshelves-edc36:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-03-17T09:48:26.811Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/bookshelves-edc36/serviceAccounts/bookshelves-edc36@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-03-17T09:48:26.811Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/bookshelves-edc36/serviceAccounts/bookshelves-edc36@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-03-17T09:48:29.032Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/bookshelves-edc36/serviceAccounts/bookshelves-edc36@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2023-03-17T09:48:29.033Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/bookshelves-edc36/serviceAccounts/bookshelves-edc36@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2023-03-17T09:48:29.037Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[debug] [2023-03-17T09:48:29.043Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bookshelves-edc36 [none]
+[debug] [2023-03-17T09:48:30.252Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bookshelves-edc36 200
+[debug] [2023-03-17T09:48:30.252Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bookshelves-edc36 {"projectId":"bookshelves-edc36","projectNumber":"553149700348","displayName":"bookshelves","name":"projects/bookshelves-edc36","resources":{"hostingSite":"bookshelves-edc36","realtimeDatabaseInstance":"bookshelves-edc36-default-rtdb"},"state":"ACTIVE","etag":"1_43a00845-a870-4e3e-ba8e-72e3a174a4c7"}
+[debug] [2023-03-17T09:48:30.253Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bookshelves-edc36 [none]
+[debug] [2023-03-17T09:48:31.396Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bookshelves-edc36 200
+[debug] [2023-03-17T09:48:31.396Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bookshelves-edc36 {"projectId":"bookshelves-edc36","projectNumber":"553149700348","displayName":"bookshelves","name":"projects/bookshelves-edc36","resources":{"hostingSite":"bookshelves-edc36","realtimeDatabaseInstance":"bookshelves-edc36-default-rtdb"},"state":"ACTIVE","etag":"1_43a00845-a870-4e3e-ba8e-72e3a174a4c7"}
+[info] 
+[info] === Deploying to 'bookshelves-edc36'...
+[info] 
+[info] i  deploying database, firestore, functions, hosting 
+[debug] [2023-03-17T09:48:32.385Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Object.join (node:path:1172:7)
+    at Config.path (/usr/lib/node_modules/firebase-tools/lib/config.js:123:45)
+    at getChildEnvironment (/usr/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:52:49)
+    at runTargetCommands (/usr/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:73:14)
+    at /usr/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:125:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async chain (/usr/lib/node_modules/firebase-tools/lib/deploy/index.js:35:9)
+    at async deploy (/usr/lib/node_modules/firebase-tools/lib/deploy/index.js:78:5)
+[error] 
+[error] Error: An unexpected error has occurred.
